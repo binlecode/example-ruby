@@ -76,7 +76,7 @@ class MySubClass < MyClass
 end
 
 # this won't raise exception !!!
-# super class instance object mixed-in module is visible to sub class !!!
+# super class object mixed-in module is visible to sub class !!!
 MySubClass.hello_module
 
 p MySubClass.ancestors
