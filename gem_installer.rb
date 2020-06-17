@@ -2,6 +2,8 @@
 # a utility script to support gem install programmatically
 # instead of using backticks (``), this uses rubygems given Command class
 # 
+# reference gist: https://gist.github.com/adamjmurray/3154437
+#
 
 require 'rubygems/commands/install_command'
 
