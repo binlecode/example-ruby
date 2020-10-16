@@ -2,8 +2,18 @@
 require 'tiny_tds'
 require 'yaml'
 
-# looking for a db conn yaml file
-db_conn = YAML.load_file('db_conn.yml')
+# looking for a `db_conn.yml` configuration file
+# assume yaml file has following keys
+# mssql:
+#     server:
+#     database:
+#     username:
+#     password:
+#
+
+conn = YAML.load_file('db_conn.yml')
+db_conn = conn['mssql']
+puts db_conn.inspect
 
 # note the azure: true option in client setup
 client = TinyTds::Client.new username: db_conn['username'],
