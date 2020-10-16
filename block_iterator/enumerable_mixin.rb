@@ -1,7 +1,7 @@
 
-# write an iterator called each , which returns the elements of your
+# First, write an iterator called each, which returns the elements of your
 # collection in turn.
-# Mix in Enumerable , and suddenly your class supports things such as
+# Then, mix in Enumerable , and suddenly your class supports things such as
 # map, include?, and find_all?.
 # If the objects in your collection implement meaningful ordering semantics
 # using the <=> method, you’ll also get methods such as min, max, and sort.
@@ -26,7 +26,8 @@ end
 
 mf = MyFibo.new(100)
 
-
 puts "total count: #{mf.count}"
 puts 'even numbers:'
 puts mf.find_all { |x| x % 2 == 0 }
+puts mf.include? 12   # => false
+
